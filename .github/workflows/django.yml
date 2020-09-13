@@ -33,7 +33,7 @@ jobs:
     - name: DB creation
       run: |
         sudo apt install postgresql postgresql-contrib postgresql-common postgresql-client
-        service postgresql start 
+        sudo systemctl start postgresql
         sudo -u postgres createdb givit 
         sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
         
