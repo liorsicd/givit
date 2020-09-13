@@ -29,9 +29,10 @@ jobs:
         cd /vagrant/givitsite/
         pipenv sync
     - name: DB creation
-        apt install postgresql postgresql-contrib postgresql-common postgresql-client
-        sudo -u postgres createdb givit
-        sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';"
+      run: |
+        apt install postgresql postgresql-contrib postgresql-common postgresql-client 
+        sudo -u postgres createdb givit 
+        sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
         
 #     - name: Run Tests
 #       run: |
