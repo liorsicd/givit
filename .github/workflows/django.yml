@@ -23,16 +23,17 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
-        python -m pip install --upgrade pip 
-        apt install libpq-dev
+        python -m pip3 install --upgrade pip 
         pip3 install pipenv
-        cd /vagrant/givitsite/
-        pipenv sync
-    - name: DB creation
-      run: |
-        apt install postgresql postgresql-contrib postgresql-common postgresql-client 
-        sudo -u postgres createdb givit 
-        sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
+#        apt install libpq-dev
+#       
+#        cd /vagrant/givitsite/
+#        pipenv sync
+#     - name: DB creation
+#       run: |
+#         apt install postgresql postgresql-contrib postgresql-common postgresql-client 
+#         sudo -u postgres createdb givit 
+#         sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
         
 #     - name: Run Tests
 #       run: |
