@@ -25,14 +25,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip 
         pip install pipenv
-        sudo apt install libpq-dev
         cd givitsite
         pipenv sync
        
         
     - name: DB creation
       run: |
-        sudo apt install postgresql postgresql-contrib postgresql-common postgresql-client
+        sudo apt install postgresql postgresql-contrib postgresql-common postgresql-client libpq-dev
         sudo systemctl start postgresql
         sudo -u postgres createdb givit 
         sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
