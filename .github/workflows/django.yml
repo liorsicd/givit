@@ -39,6 +39,8 @@ jobs:
         
     - name: migrate
       run: |
+        cd givitsite
+        ls
         pipenv run python3 manage.py migrate
 #     - name: Run Tests
 #       run: |
