@@ -37,6 +37,9 @@ jobs:
         sudo -u postgres createdb givit 
         sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'givit';" 
         
+    - name: migrate
+        run: |
+          pipenv run python3 manage.py migrate
 #     - name: Run Tests
 #       run: |
 #         python manage.py test
