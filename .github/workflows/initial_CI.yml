@@ -19,5 +19,5 @@ jobs:
         python-version: 3.7
     - name: Install Dependencies using bootstrap.sh and migrate
       run: |
-        python -m pip install --upgrade pip 
-        run ./bootstrap.sh
+        run /bootstrap.sh
+#        python -m pip install --upgrade pip 
