@@ -17,9 +17,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
-    - name: Install Dependencies using bootstrap.sh and migrate
+    - name: run boostrap.sh
       run: |
-        cd ./
-        ls -l
-        sh bootstrap.sh
-#        python -m pip install --upgrade pip 
+        sh /bootstrap.sh
