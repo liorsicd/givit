@@ -9,7 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 20
+      max-parallel: 2
 
     steps:
     - uses: actions/checkout@v2
@@ -19,4 +19,5 @@ jobs:
         python-version: 3.7
     - name: run boostrap.sh
       run: |
-        sh /bootstrap.sh
+        cd ./
+        sh bootstrap.sh
