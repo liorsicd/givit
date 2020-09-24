@@ -10,10 +10,10 @@ URL_NAME_LIST = ['requestItem', 'itemRequest_create_view']
 class FriendPageTests_views_GET(TestCase):
 
     # check the status code when navigate to the given url
-    def test_request_status_code(self):
-        for url in URL_LIST:
-            response = self.client.get(url)
-            self.assertEquals(response.status_code, 200)
+#     def test_request_status_code(self):
+#         for url in URL_LIST:
+#             response = self.client.get(url)
+#             self.assertEquals(response.status_code, 200)
 
     # check url name
     def test_request_url_name(self):
