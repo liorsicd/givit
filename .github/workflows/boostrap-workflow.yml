@@ -16,3 +16,7 @@ jobs:
     - name: run boostrap.sh
       run: |
         ./bootstrap.sh
+    - name: Run tests
+      run: |
+        cd givitsite
+        pipenv run pytest
