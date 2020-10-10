@@ -20,3 +20,7 @@ jobs:
       run: |
         cd givitsite
         pipenv run pytest -s -v
+
+    - name: Agura test
+      if: github.event.pull_request.merged == true 
+       echo "agura test" 
